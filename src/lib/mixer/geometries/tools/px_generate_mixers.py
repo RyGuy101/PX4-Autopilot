@@ -338,6 +338,9 @@ if __name__ == '__main__':
         # Normalize mixer
         B_px = normalize_mix_px4(B)
 
+        if geometry['info']['key'] == '4xlt':
+            B_px *= 0.20 # Scale motor outputs down by 20 percent
+
         # Store matrices in geometry
         geometry['mix'] = {'A': A, 'B': B, 'B_px': B_px}
 
