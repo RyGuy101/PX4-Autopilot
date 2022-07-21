@@ -1,0 +1,5 @@
+menuconfig DRIVERS_CORVUS_CAN
+	bool "corvus_can"
+	default n
+	---help---
+		Enable support for corvus_can

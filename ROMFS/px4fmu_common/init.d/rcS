@@ -291,6 +291,11 @@ else
 		if param greater -s CYPHAL_ENABLE 0
 		then
 			cyphal start
+		else
+			if param greater -s CORVUS_CAN_EN 0
+			then
+				corvus_can start
+			fi
 		fi
 	fi
 
